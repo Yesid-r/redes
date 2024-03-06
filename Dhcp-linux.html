@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>LINUX SERVER</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios linux server</h1>
+		<nav>
+			<a href="linux_server.html">LINUX</a>
+			<a href="#">DHCP</a>
+			<a href="Dns-linux.html">DNS</a>
+			<a href="Http-linux.html">HTTP</a>
+			<a href="Ftp-linux.html">FTP</a>
+			<a href="Smtp-linux.html">SMTP</a>
+			<a href="index.html">Regresar</a>
+
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>DHCP: Protocolo de Configuración Dinámica de Host- Dynamic Host Configuration Protocol</h2>
+			<h3>Puerto: SERVIDORES UDP 67 - CLIENTE UDP 68 </h3>
+			<p>El Protocolo de configuración dinámica de host (DHCP) es un protocolo cliente-servidor que proporciona
+				automáticamente un host de protocolo de Internet (IP)
+				con su dirección IP y otra información de configuración relacionada, como la máscara de subred y la
+				puerta de enlace de predeterminada. </p>
+			<p style="margin-top: 10px">El servidor DHCP mantiene un grupo de direcciones IP y concede una dirección a
+				cualquier cliente habilitado para DHCP cuando se inicia en la red.
+				Dado que las direcciones IP son dinámicas (concedidas) en lugar de estáticas (asignadas
+				permanentemente), las direcciones que ya no están en uso se devuelven automáticamente al grupo para la
+				reasignación.</p>
+
+
+			<p class="texto">Para empezar: el adpatador de red debe estar en NAT o Adaptador puente para tener conexion
+				a internet y poder
+				descragar los paquetes de los servicios a instalar. Al ingresar al centos debe ingresar como super
+				usuario:
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/1.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/2.png" class="mi-clase">
+			</div>
+			<h2>Proceso de Instalacion:</h2>
+
+			<p class="texto">Para empezar la insltalacion se debe emplear el comando "nmtui" para activar tarjeta de
+				red.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/3.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/4.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Ahora se procede a instalar el paquete del servicio:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/6.png" class="mi-clase">
+				<p class="texto">y al finalizar la instalacion se vera así</p>
+				<img src="./imagenes/dhcp-centos/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Ahora se procede a asignar una IP estatica, no si antes modificar el adaptador de Red a red
+				inetrna
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/8.png" class="mi-clase">
+				<p class="texto">Nuevamente nmtui para generar la conexión, pero esta vez será modificada porque se
+					elige configuración manual
+					donde se asignara la ip del servidor, la puerta de enlace y la ip del dns que sera la misma del
+					servidos,
+					como se muestra
+					en la imagen:
+				</p>
+				<img src="./imagenes/dhcp-centos/9.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/10.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/3.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/12.png" class="mi-clase">
+			</div>
+		
+			<p class="texto">Despues se hace la configuración del archivo del dhcp es decir el dhcpd.conf como muestra
+				la imagen y se hace enter</p>
+
+			<p class="texto">Ahora se borra y secrea una copia de ese archivo</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/16.png" class="mi-clase">
+				<p class="texto"> La copia se hace con la linea nateriormenete mencionada:</p>
+				<img src="./imagenes/dhcp-centos/17.png" class="mi-clase">
+			</div>
+
+
+			<p class="texto">Con ls se verifica que si haya sido creado, ahora se debe ingresar y descomentar la linea
+				que
+				muestra la imagen:
+			</p>
+			<div style="text-align: center;">
+				
+				<img src="./imagenes/dhcp-centos/19.png" class="mi-clase">
+				<p class="texto">Se guarda con ctrl + O seguido de ctrl+enter seguido de ctrl+x</p>
+			</div>
+
+			<p class="texto">Se inicia el servidor, si al dar enter no sale ningún error quiere decir que esta
+				funcionando</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/21.png" class="mi-clase">
+				<p class="texto">Se verifica el estado y debe indicar que está funcionando:</p>
+				<img src="./imagenes/dhcp-centos/22.png" class="mi-clase">
+			</div>
+
+
+			<p class="texto"> Asi estará instalado y configurado el servicio DHCP y se puede proceder a hacer las
+				pruebas
+				con el cliente</p>
+
+
+
+		</main>
+	</main>
+	<footer>
+		<p> Yesid Rincon </p>
+	</footer>
+</body>
+
+</html>

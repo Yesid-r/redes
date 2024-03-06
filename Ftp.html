@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Windows server</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios Windows server</h1>
+		<nav>
+			<a href="index.html">Inicio</a>
+			<a href="About.html">About</a>
+			<a href="Dhcp.html">DHCP</a>
+			<a href="Dns.html">DNS</a>
+			<a href="Http.html">HTTP</a>
+			<a href="#">FTP</a>
+			<a href="Smtp.html">SMTP</a>
+
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<p>
+				FTP es el acrónimo de «Protocolo de Transferencia de Ficheros» (en inglés, File Transfer Protocol). FTP es un protocolo que se utiliza para transferir todo tipo de archivos entre equipos conectados a una red, por ejemplo Internet.
+			</p>
+
+			<div style="text-align: center;">
+
+				<img src="./imagenes/ftp.jpg" width="550" height="650" alt="Imagen de muestra">
+
+			</div>
+			<h2>Instalacion</h2>
+
+			<p class="texto">Seleccionar agregar roles y caracteristicas</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/1p.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Seleccionamos la opción Instalación basada en características o en roles</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/2p.png" class="mi-clase">
+			</div>
+		
+			</div>
+
+			<p class="texto">Seleccionar servidor de destino</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/4p.png" class="mi-clase">
+				<p class="texto">Se elige el Servicio, que aparece como Servidor web (IIS)</p>
+				<img src="./imagenes/conf-ftp/5.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Aparecerá en pantalla el siguiente dialogo, se debe hacer clic en agregar
+				caracteristicas y aparerá el servicio seleccionado</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/6.png" class="mi-clase">
+				<img src="./imagenes/conf-ftp/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se hará clic sucesivamente en siguiente hasta llegar a la ventana de confirmación
+				donde se debe hacer clic en
+				“Instalar”</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/9.png" class="mi-clase">
+				<p class="texto">Una vez instalada nos indica que la instalación es correcta y clicamos en “Cerrar”</p>
+				<img src="./imagenes/conf-ftp/10.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se repetiran los pasos anteriores hasta llegar a Roles de servidor y desplegamos
+				Servidor
+				Web (IIS), tal como se observa en la siguiente pantalla, aqui se debe hacer clic en Servidor FTP y
+				confirmamos tiene seleccionado tanto Servicio FTP como
+				Extensibilidad de FTP</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/8.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se hará lo mismo que en el paso 6, es decir se hará clic en siguiente hasta llegar
+				a la ventana de confirmación donde se debe hacer clic en
+				“Instalar”</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/9.png" class="mi-clase">
+				<p class="texto">Una vez instalada nos indica que la instalación es correcta y clicamos en “Cerrar”</p>
+				<img src="./imagenes/conf-ftp/10.png" class="mi-clase">
+			</div>
+
+			<h2>Configuración:</h2>
+
+			<p class="texto">Abrir administrador de internet información services</p>
+			<div style="text-align: center;">
+				
+				<p class="texto">Abrira la siguiente pantalla, que es donde se realizaran las configuraciones:</p>
+				<img src="./imagenes/conf-ftp/12.png" class="mi-clase">
+			</div>
+
+
+
+			<p class="texto">Asignar el nombre del sitio e indicar la ruta
+				donde se van a encontrar los contenidos
+				del servicio y se hacer clic en Siguiente.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/14.png" class="mi-clase">
+			</div>
+
+			<p class="texto">En la nueva pantalla se escribe la dirección IP del servidor y el puerto que
+				aparece por defecto. Para esta configuración básica
+				hemos de indicar que no utilizaremos cifrado SSL, la pantalla debe quedar de la siguiente forma se hace
+				clic en Siguiente: </p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/15.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Paso 5: En la pantalla se debe configurar el tipo de autentificación,así como, los usuarios
+				que están autorizados, despues se hara clic en
+				“Finalizar” </p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/16.png" class="mi-clase">
+				<p class="texto"> Se mostrara el sitio FTP creado</p>
+				<img src="./imagenes/conf-ftp/17.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Paso 10: Ahora se debe asignar el Firewall de que hay un servicio FTP activo, para ello
+				accedemos al Administrador del
+				servidor, “Herramientas” y “Firewall de Windows con seguridad avanzada” </p>
+			<div style="text-align: center;">
+				
+			</div>
+
+			<p class="texto">Se abre una ventana y sobre Reglas de entrada en el panel izquiero hacemos clic
+				derecho y seleccinamos
+				“Nueva Regla”</p>
+
+			<p class="texto"> Marcamos Puerto como el tipo de regla que deseamos crear y hacemos clic en “Siguiente”.
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/26.png" class="mi-clase">
+			</div>
+
+			<p class="texto"> Indicamos protocolo TCP y como puerto local específico 21, hacemos clic en “Siguiente”.
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/27.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Marcamos permitir la conexión y hacemos clic en “Siguiente”.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/28.png" class="mi-clase">
+			</div>
+
+			<p class="texto"> Se dejan las opciones por defecto y hacemos clic en “Siguiente”.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/29.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se pone como nombre de la regla FTP y damos a “Finalizar”.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/30.png" class="mi-clase">
+				<p class="texto">Se mostrara la siguiente imagen donde se verifica que se ha creado la regla teniendo en
+					cuenta el recuadro rojo</p>
+				<img src="./imagenes/conf-ftp/31.png" class="mi-clase">
+			</div>
+
+			
+
+
+
+
+
+		</main>
+	</main>
+	<footer>
+		<p>Yesid Rincon &copy; 2024 </p>
+	</footer>
+</body>
+
+</html>

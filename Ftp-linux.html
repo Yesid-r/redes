@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>LINUX SERVER</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios linux server</h1>
+		<nav>
+			<a href="linux_server.html">LINUX</a>
+			<a href="Dhcp-linux.html">DHCP</a>
+			<a href="Dns-linux.html">DNS</a>
+			<a href="Http-linux.html">HTTP</a>
+			<a href="#">FTP</a>
+			<a href="Smtp-linux.html">SMTP</a>
+			<a href="index.html">Regresar</a>
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>FTP: Protocolo de Transferencia de Archivos-File Transfer Protocol </h2>
+			<h3>Puerto TCP 20-21</h3>
+			<p> Es un protocolo de red que se utiliza para transferir archivos entre un cliente
+				y un servidor en una red de área amplia (WAN) o en una red de área local (LAN).
+				FTP permite a los usuarios conectarse a un servidor remoto y transferir archivos entre el servidor y su
+				computadora local.
+				Para conectarse a un servidor FTP, se requiere un cliente FTP que proporcione una interfaz para enviar y
+				recibir archivos.
+				Los clientes FTP populares incluyen FileZilla, Cyberduck, y WinSCP, entre otros.
+			</p>
+
+
+			<p class="texto">Para empezar: el adpatador de red debe estar en NAT o Adaptador puente para tener conexion
+				a internet y poder
+				descragar los paquetes de los servicios a instalar. Al ingresar al centos debe ingresar como super
+				usuario:
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/1.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/2.png" class="mi-clase">
+			</div>
+
+			<h2>Proceso de Instalacion:</h2>
+
+
+			<p class="texto">Para empezar la insltalacion se debe emplear el comando "nmtui" para activar tarjeta de
+				red.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/3.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/4.png" class="mi-clase">
+			</div>
+
+
+			<p class="texto">Despues se hacemos un reset y
+				Ping a Google para comprobar la conexión
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/5.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Ahora se procede a instalar el paquete del servicio:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/ftp-centos/6.png" class="mi-clase">
+				<p class="texto">y al finalizar la instalacion se vera así</p>
+				<img src="./imagenes/ftp-centos/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se modifica el adaptador de Red a red inetrna</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/8.png" class="mi-clase">
+				<p class="texto">Nuevamente nmtui para generar la conexión, en configuracion manual y ademas tendra
+					asignada la ip del servidor, la puerta de enlace y la ip del dns que sera la misma del servidos,
+					como se muestra en la imagen:
+				</p>
+				<img src="./imagenes/dns-centos/9.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/10.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/11.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Despues se hace la configuración del archivo vsftpd.conf como muestra la imagen y se hace
+				enter</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/ftp-centos/12.png" class="mi-clase">
+				<p class="texto">Aparecera en pantalla el siguiente archivo el cual se debe modificar y debe quedar de
+					la siguiente manera</p>
+				
+			</div>
+
+			<p class="texto">Se inicia el servicio ftp, ademas se para el firewall del servidor:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/ftp-centos/15.png" class="mi-clase">
+			</div>
+
+
+
+			<p class="texto"> Se tendra lista la instalación y configuración del servicio FTP, se puede proceder a hacer
+				las pruebas
+				con el cliente</p>
+
+		</main>
+	</main>
+	<footer>
+		<p> Yesid Rincon </p>
+	</footer>
+</body>
+
+</html>

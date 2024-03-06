@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>LINUX SERVER</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios linux server</h1>
+		<nav>
+			<a href="linux_server.html">LINUX</a>
+			<a href="Dhcp-linux.html">DHCP</a>
+			<a href="Dns-linux.html">DNS</a>
+			<a href="#">HTTP</a>
+			<a href="Ftp-linux.html">FTP</a>
+			<a href="Smtp-linux.html">SMTP</a>
+			<a href="index.html">Regresar</a>
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>HTTP: Protocolo de Transferencia de Hipertexto-Hypertext Transfer Protocol </h2>
+			<h3>Puerto TCP 80</h3>
+			<p>Es el protocolo de comunicación que se utiliza para transferir datos a través de Internet, especialmente
+				en la World Wide Web.
+				HTTP funciona mediante una solicitud-respuesta entre un cliente y un servidor web. Cuando un usuario
+				introduce una URL en un navegador web,
+				el navegador envía una solicitud HTTP al servidor web para obtener la página web correspondiente. El
+				servidor web procesa la solicitud y
+				envía una respuesta HTTP al navegador, que contiene la página web solicitada.
+			</p>
+			<p class="texto">Para empezar: el adpatador de red debe estar en NAT o Adaptador puente para tener conexion
+				a internet y poder
+				descragar los paquetes de los servicios a instalar. Al ingresar al centos debe ingresar como super
+				usuario:
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/1.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/2.png" class="mi-clase">
+			</div>
+			<h2>Proceso de Instalacion:</h2>
+
+			<p class="texto">Para empezar la insltalacion se debe emplear el comando "nmtui" para activar tarjeta de
+				red.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/3.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/4.png" class="mi-clase">
+			</div>
+
+
+
+			<p class="texto">Ahora se procede a instalar el paquete del servicio:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/http-centos/6.png" class="mi-clase">
+				<p class="texto">y al finalizar la instalacion se vera así</p>
+				<img src="./imagenes/http-centos/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se modifica el adaptador de Red a red inetrna</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/8.png" class="mi-clase">
+				<p class="texto">Nuevamente nmtui para generar la conexión, en configuracion manual y ademas tendra
+					asignada la ip del servidor, la puerta de enlace y la ip del dns que sera la misma del servidos,
+					como se muestra en la imagen:
+				</p>
+				<img src="./imagenes/dns-centos/9.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/10.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/11.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Despues se hace la configuración del archivo httpd.conf como muestra la imagen y se hace
+				enter</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/http-centos/12.png" class="mi-clase">
+				<p class="texto">Aparecera en pantalla el siguiente archivo el cual se debe modificar y debe quedar de
+					la siguiente manera</p>
+				
+				<img src="./imagenes/http-centos/14.PNG " class="mi-clase">
+				<p class="texto">Creamos el virtual host para acceso publico, se guarda el archivo con ctrl + O seguido
+					de
+					enter seguido ctrl + X:</p>
+				
+			</div>
+
+
+			<p class="texto">Ahora se debe reiniciar el servidor:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/http-centos/16.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Ahora ingresamos a la dirección de DocumentRoot y es allí donde se almacenara la pagina
+				web.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/http-centos/17.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se inicia el sistema y se verifica su estado</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/http-centos/18.png" class="mi-clase">
+			</div>
+
+			<p class="texto">NOTA: el firewall debe estar inactivo en el servidor y en el cliente</p>
+			<p class="texto"> Así queda instalado y configurado el servicio HTTP y se puede proceder a hacer las pruebas
+				con el cliente</p>
+
+		</main>
+	</main>
+	<footer>
+		<p>Yesidd Rinccon</p>
+	</footer>
+</body>
+
+</html>

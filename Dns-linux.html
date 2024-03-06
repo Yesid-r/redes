@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>LINUX SERVER</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios linux server</h1>
+		<nav>
+			<a href="linux_server.html">LINUX</a>
+			<a href="Dhcp-linux.html">DHCP</a>
+			<a href="#">DNS</a>
+			<a href="Http-linux.html">HTTP</a>
+			<a href="Ftp-linux.html">FTP</a>
+			<a href="Smtp-linux.html">SMTP</a>
+			<a href="index.html">Regresar</a>
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>DNS: Sistema de Nombres de Dominio-Domain Name System</h2>
+			<h3>Puerto UDP 53</h3>
+			<p>Es un sistema que se utiliza para traducir los nombres de dominio de sitios web en direcciones IP
+				numéricas que las computadoras puedan entender y procesar. </p>
+			<p style="margin-top: 10px">Cada vez que introduces una URL en tu navegador web, el navegador realiza una
+				consulta de DNS para encontrar la dirección IP numérica
+				correspondiente al nombre de dominio. Si la consulta es exitosa, la computadora puede conectar con el
+				servidor web que aloja el sitio web solicitado y descargar la página web.</p>
+
+			<p class="texto">Para empezar: el adpatador de red debe estar en NAT o Adaptador puente para tener conexion
+				a internet y poder
+				descragar los paquetes de los servicios a instalar. Al ingresar al centos debe ingresar como super
+				usuario:
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/1.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/2.png" class="mi-clase">
+			</div>
+			<h2>Proceso de Instalacion:</h2>
+
+
+			<p class="texto">Para empezar la insltalacion se debe emplear el comando "nmtui" para activar tarjeta de
+				red.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/3.png" class="mi-clase">
+				<img src="./imagenes/dhcp-centos/4.png" class="mi-clase">
+			</div>
+
+
+			<p class="texto">Despues se hacemos un reset y
+				Ping a Google para comprobar la conexión
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dhcp-centos/5.png" class="mi-clase">
+			</div>
+			<p class="texto">Ahora se procede a instalar el paquete del servicio:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/6.png" class="mi-clase">
+				<p class="texto">y al finalizar la instalacion se vera así</p>
+				<img src="./imagenes/dns-centos/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se modifica el adaptador de Red a red interna</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/8.png" class="mi-clase">
+				<p class="texto">Nuevamente nmtui para generar la conexión, en configuracion manual y ademas tendra
+					asignada la ip del servidor, la puerta de enlace y la ip del dns que sera la misma del servidos,
+					como se muestra en la imagen:
+				</p>
+				<img src="./imagenes/dns-centos/9.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/10.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/11.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Despues se hace la configuración del archivo named.conf como muestra la imagen y se hace
+				enter</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/12.png" class="mi-clase">
+				<p class="texto">Aparecera en pantalla el siguiente archivo el cual se debe modificar y debe quedar de
+					la siguiente manera</p>
+				<img src="./imagenes/dns-centos/13.png " class="mi-clase">
+				<p class="texto">También se modifican la inversa y la directa y las últimas dos líneas se comentan, se
+					guarda el archivo con ctrl + O seguido de
+					enter seguido ctrl + X:</p>
+				<img src="./imagenes/dns-centos/14.png " class="mi-clase">
+			</div>
+
+			
+				
+
+			</div>
+
+			<p class="texto">Ahora se copeara el archivo de directa para la inversa y se confgura el archivo:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/19.png" class="mi-clase">
+				<p class="texto">La configuarcion del archivo debe quedar asi:
+					(El 1 hace referencia al ultimo octeto de la ip del servidor en mi caso es 192.168.16.1)
+				</p>
+				<img src="./imagenes/dns-centos/19.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se darán los permisos, para ello primero se ven los permisos de todo el grupo y se
+				configuran para que todos este en un mismo named</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/21.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Editar el archivo resolv.conf y guardar:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/22.png" class="mi-clase">
+				<img src="./imagenes/dns-centos/23.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Tambien se tiene que editar el host, quedando de la siguiente manera:</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/25.png" class="mi-clase">
+
+			</div>
+
+
+			<p class="texto">Ahora abrimos el puerto 53 TCP y UDP en el firewall para poder hacer pruebas con un
+				cliente.
+				Esto lo podemos hacer ya sea agregando los puertos y protocolo uno por vez o agregando el servicio.
+				Una vez agregado, comprobamos.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/dns-centos/30.png" class="mi-clase">
+				<p class="texto">Habilitamos el servicio para que inicie con el Sistema</p>
+				<img src="./imagenes/dns-centos/31.png" class="mi-clase">
+			</div>
+
+
+			<p class="texto"> Así ya estará configurado el servicio DNS del servidor y se puede proceder a hacer las
+				pruebas
+				con el cliente.</p>
+		</main>
+	</main>
+	<footer>
+		<p>Yesid Rincon </p>
+	</footer>
+</body>
+
+</html>

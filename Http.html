@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Windows server </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios Windows server</h1>
+		<nav>
+			<a href="index.html">Inicio</a>
+			<a href="About.html">About</a>
+			<a href="Dhcp.html">DHCP</a>
+			<a href="Dns.html">DNS</a>
+			<a href="#">HTTP</a>
+			<a href="Ftp.html">FTP</a>
+			<a href="Smtp.html">SMTP</a>
+			
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>HTTP: Protocolo de Transferencia de Hipertexto-Hypertext Transfer Protocol </h2>
+			<h3>Puerto TCP 80</h3>
+			<p>Hypertext Transfer Protocol (HTTP) (o Protocolo de Transferencia de Hipertexto en español) es un protocolo de la capa de aplicación para la transmisión de documentos hipermedia, como HTML. Fue diseñado para la comunicación entre los navegadores y servidores web, aunque se puede utilizar para otros propósitos también.</p>
+
+			<div style="text-align: center;">
+
+				<img src="./imagenes/http.jpg" width="550" height="650" alt="Imagen de muestra">
+
+			</div>
+			<h2>Proceso de Instalacion:</h2>
+
+			<h2>Proceso de Instalacion:</h2>
+
+			<p class="texto">Agregar roles y caracteristicas</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/1p.png" class="mi-clase">
+			</div>
+
+			<p class="texto">En la siguinete pantalla se muestra el asistente para agregar tanto el servicio FTP
+				como otros servicios. Se hace Clic en «Siguiente».</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/2p.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Seleccionamos la opción «Instalación basada en características o en roles», ya que
+				se va a configurar un solo servidor.</p>
+			<div style="text-align: center;">
+			</div>
+
+			<p class="texto">Mantenemos seleccionada la opción «Seleccionar un servidor del grupo de servidores»
+				en este caso al tener un solo servidor este sera elegido para instalar el servicio</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-DNS/4p.png" class="mi-clase">
+				<p class="texto">Se elige el Servicio, que aparece como Servidor web (IIS)</p>
+				<img src="./imagenes/conf-ftp/5.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Aparecerá en pantalla el siguiente dialogo, se debe hacer clic en agregar
+				caracteristicas y aparerá el servicio seleccionado</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/6.png" class="mi-clase">
+				<img src="./imagenes/conf-ftp/7.png" class="mi-clase">
+			</div>
+
+			<p class="texto">Se hará clic sucesivamente en siguiente hasta llegar a la ventana de confirmación
+				donde se debe hacer clic en
+				“Instalar”</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-ftp/9.png" class="mi-clase">
+				<p class="texto">Una vez instalada nos indica que la instalación es correcta y clicamos en “Cerrar”</p>
+				<img src="./imagenes/conf-ftp/10.png" class="mi-clase">
+			</div>
+
+
+			<h2>Configuración:</h2>
+
+			<p class="texto">Abrir «Administrador de Internet Information Services (IIS)
+				recuadro azul</p>
+			<p class="texto"> Clic en la pestaña que tine el nombre del servidor, abrirá una ventana en la que
+				respondemos que no y clicamos en que no
+				vuelva a repetirla. Se hace clic derecho en la carpeta Sitios y clic en Agregar sitio WEB como muestra
+				la imagen</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-http/1.PNG" class="mi-clase">
+			</div>
+
+			<p class="texto">Abrira una nueva pantalla donde se deben completar los campos, como aparece en la
+				imagen,
+				se debe tener presente la carpeta o ruta donde se va a almacenar la información del sitio web, al igual
+				que la ip y el dominio del host.
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-http/4.PNG" class="mi-clase">
+				<p class="texto">Asi quedaria la informacion:</p>
+				<img src="./imagenes/conf-http/3.PNG" class="mi-clase">
+
+			</div>
+			<p class="texto">Finalmente se tiene la imagen de la carpeta donde se almacena el sitio web, en este caso
+				ya tiene una pagina web creada.</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-http/5.PNG" class="mi-clase">
+
+			</div>
+			
+
+		</main>
+	</main>
+	<footer>
+		<p>Yesid Rincon &copy; 2024 </p>
+	</footer>
+</body>
+
+</html>

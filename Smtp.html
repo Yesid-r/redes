@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Windows server</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Instalación de servicios Windows server</h1>
+		<nav>
+			<a href="index.html">Inicio</a>
+			<a href="About.html">About</a>
+			<a href="Dhcp.html">DHCP</a>
+			<a href="Dns.html">DNS</a>
+			<a href="Http.html">HTTP</a>
+			<a href="Ftp.html">FTP</a>
+			<a href="#">SMTP</a>
+
+
+		</nav>
+	</header>
+	<main>
+		<main>
+			<h2>SMTP: Protocolo Simple de Tranferencia de Correo-Simple Mail Transfer Protocol</h2>
+			<h3>Puerto TCP 25</h3>
+			<p> Un servidor SMTP, también conocido como servidor de correo saliente, es una computadora o un software que administra los mensajes del correo electrónico salientes. En general, un servidor de correo se refiere a un sistema que recopila, administra y envía correos electrónicos.
+			</p>
+
+			<div style="text-align: center;">
+
+				<img src="./imagenes/smtp.png" width="550" height="650" alt="Imagen de muestra">
+
+			</div>
+			<h2>Proceso</h2>
+
+			<p class="texto">En este caso se implementaron dos programas para el envio de correos,
+				en el servidor se hizo la instalacion y configuracion del mercury:</p>
+			<div style="text-align: center;">
+				<p class="texto">Para la siguiente configuración se debe abrir el mercury y hacer clic donde muestar la
+					imagen:</p>
+				<img src="./imagenes/conf-Smtp/5.PNG" class="mi-clase">
+				<p class="texto">En la siguiente imagen se hizo la configutacion de la IP del servidor:</p>
+				<img src="./imagenes/conf-Smtp/1.PNG" class="mi-clase">
+
+				<p class="texto">Aqui se hizo la configutacion de la IP y el dominio del servidor:</p>
+				<img src="./imagenes/conf-Smtp/2.PNG" class="mi-clase">
+
+
+				<p class="texto">Se crearon los usuarios con su nombre y contraseña, a partir de los cuales
+					se hara registro de los correos. Quedan como se muestra en la siguiente imagen:</p>
+				<img src="./imagenes/conf-Smtp/3.PNG" class="mi-clase">
+			</div>
+
+
+			<p class="texto">En el cliente se instalo el thunderbird, y al ejecutarlo se registran los correos,
+				los cuales deben contener el nombre, el correo (este incluye el nombre del usuario y debe terminar
+				con el dominio del servidor y tambien su debida contraseña). Al finalizar el registro de los correos
+				aparecen
+				como se muestra en la imagen.
+			</p>
+			<div style="text-align: center;">
+				<img src="./imagenes/conf-Smtp/4.PNG" class="mi-clase">
+			</div>
+
+
+			<p class="texto"> Así queda instalado y configurado el servicio SMTP</p>
+		</main>
+	</main>
+	<footer>
+		<p>Yesid Rincon &copy; 2024 </p>
+	</footer>
+</body>
+
+</html>
